@@ -12,12 +12,19 @@ section{
     display: flex;
     padding: 10px;
 }
-.rdiv{
+.container{
+  display: flex;
+}
+.rdiv, .rdiv2{
   background-color: #282c34;
   text-align: justify;
   color: #fff;
   padding: 50px;
   width: 50%;
+}
+.rdiv2{
+    background-color: #fff;
+    color: #282c34;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

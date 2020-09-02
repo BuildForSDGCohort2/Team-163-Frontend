@@ -15,9 +15,21 @@ function App() {
         <a href="5">SIGN UP</a>
         </nav>
       </header>
-      <div>
-      <div>
-        
+      <div className="container">
+      <div className="rdiv2">
+          Vehicle free-market uplink gang Tokyo
+          systema silent alcohol grenade rain 
+          tank-traps savant singularity boy.
+           Office alcohol apophenia hacker 
+           fluidity franchise engine A.I. 
+           convenience store drone modem. 
+           Systema shanty town girl camera 
+           dome ablative tiger-team corporation
+            paranoid rain convenience store Chiba 
+            denim pre-lights. Tower dead realism
+             modem otaku dolphin hotdog bridge 
+             tank-traps shrine pen nano-Kowloon
+              wristwatch artisanal DIY office.
       </div>
       <div className="rdiv">
           Vehicle free-market uplink gang Tokyo
@@ -50,7 +62,7 @@ function App() {
         </Card>
         <Card>
           <Circle>2</Circle>
-          <p className="bld">TAKE A PICTURE</p>
+          <p className="bld">ADD COMMENT</p>
           <p>
             Beef noodles corporation narrative
              refrigerator corrupted singularity 
@@ -61,7 +73,7 @@ function App() {
         </Card>
         <Card>
           <Circle>3</Circle>
-          <p className="bld">TAKE A PICTURE</p>
+          <p className="bld">ALLOW LOCATION</p>
           <p>
             Beef noodles corporation narrative
              refrigerator corrupted singularity 
