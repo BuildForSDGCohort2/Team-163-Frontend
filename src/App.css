@@ -7,6 +7,18 @@
   pointer-events: none;
 }
 
+section{
+    justify-content: space-around;
+    display: flex;
+    padding: 10px;
+}
+.rdiv{
+  background-color: #282c34;
+  text-align: justify;
+  color: #fff;
+  padding: 50px;
+  width: 50%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
