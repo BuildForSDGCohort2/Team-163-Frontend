@@ -36,10 +36,7 @@ const App = () => {
            Systema shanty town girl camera 
            dome ablative tiger-team corporation
             paranoid rain convenience store Chiba 
-            denim pre-lights. Tower dead realism
-             modem otaku dolphin hotdog bridge 
-             tank-traps shrine pen nano-Kowloon
-              wristwatch artisanal DIY office. 
+            denim pre-lights.  
       </div>
       </div>
 

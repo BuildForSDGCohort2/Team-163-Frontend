@@ -6,7 +6,7 @@ const Footer = styled.div`
   	align-items: center;
 	background-color: #292929;
 	color: #fff;
-	height: 100px; 
+	height: 70px; 
 `
 
 const Circle = styled.div`
@@ -26,7 +26,7 @@ const Navs = styled.div`
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 10px;
 	align-items: center;
 `
 

@@ -14,7 +14,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width:300px;
-  font-size: calc(9px + 1.5vmin);
+  font-size: calc(9px + 1vmin);
   margin: 0;
   padding-left: calc(2px + .5vmin);
 }
@@ -30,7 +30,7 @@
 section{
     justify-content: space-around;
     display: flex;
-    padding: 10px;
+    padding: 70px;
 }
 .container{
   display: flex;
@@ -39,12 +39,21 @@ section{
   background-color: #282c34;
   text-align: justify;
   color: #fff;
-  padding: 50px;
+  padding: 35px;
   width: 50%;
+  height: 250px;
+  overflow: scroll;
+   display: flex;
+   justify-content: center;
+    align-items: center;
 }
 .rdiv2{
-    background: url('./resources/bgimage.jpeg') no-repeat center;
+    background: url('./resources/bgimage.jpeg');
     color: #282c34;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
 .navLinks a, .accessLinks a{
@@ -58,6 +67,5 @@ section{
 
 .App-header {
   background-color: #282c34;
-  font-size: calc(3px + 2vmin);
   color: white;
 }
