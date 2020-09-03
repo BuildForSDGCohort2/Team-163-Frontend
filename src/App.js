@@ -1,35 +1,30 @@
 import React from 'react';
 import './App.css';
-import {Footer, Circle, Card} from './Components/StyledComponents'
+import { Footer, Circle, Navs, Card } from './Components/StyledComponents'
 
-function App() {
-  return (
-    <div className="App">
+const App = () => {
+    return (
+        <div className="App">
       <header className="App-header">
-        <nav >
-        <a href="1">ROADABLE</a>
-        <a href="1">HOME</a>
-        <a href="2">HOW IT WORKS</a>
-        <a href="3">ABOUT US</a>
-        <a href="4">LOGIN</a>
-        <a href="5">SIGN UP</a>
-        </nav>
+        <Navs>
+        <a className="logo" href="1">ROADABLE
+        </a>
+        
+          <ul className="navLinks">
+            <li>HOME</li>
+            <li>HOW IT WORKS</li>
+            <li>ABOUT US</li>
+          </ul>
+        
+        <ul className="accessLinks">
+          <li href="4">LOGIN</li>
+          <li href="5">SIGN UP</li>
+        </ul>
+        
+        </Navs>
       </header>
       <div className="container">
       <div className="rdiv2">
-          Vehicle free-market uplink gang Tokyo
-          systema silent alcohol grenade rain 
-          tank-traps savant singularity boy.
-           Office alcohol apophenia hacker 
-           fluidity franchise engine A.I. 
-           convenience store drone modem. 
-           Systema shanty town girl camera 
-           dome ablative tiger-team corporation
-            paranoid rain convenience store Chiba 
-            denim pre-lights. Tower dead realism
-             modem otaku dolphin hotdog bridge 
-             tank-traps shrine pen nano-Kowloon
-              wristwatch artisanal DIY office.
       </div>
       <div className="rdiv">
           Vehicle free-market uplink gang Tokyo
@@ -84,10 +79,10 @@ function App() {
         </Card>
       </section>
       <Footer>
-       &#169; Copyright 2020
+       <p>&#169; Copyright 2020</p>
       </Footer>
     </div>
-  );
+    );
 }
 
 export default App;

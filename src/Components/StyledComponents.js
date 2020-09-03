@@ -1,15 +1,17 @@
 import styled from 'styled-components';
 
 const Footer = styled.div`
-	text-align: center;
+	  display: flex;
+ 	 justify-content: center;
+  	align-items: center;
 	background-color: #292929;
 	color: #fff;
 	height: 100px; 
-	align-content: center;`
+`
 
 const Circle = styled.div`
 	text-align: center;
-	background-color: purple;
+	background-color: #b938ff;
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
@@ -19,6 +21,15 @@ const Circle = styled.div`
 	line-height: 50px;
 	font-size: 1.5em
 `
+
+const Navs = styled.div`
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 20px;
+	align-items: center;
+`
+
 const Card = styled.div`
 	text-align: center;
 	width: 200px;
@@ -26,7 +37,7 @@ const Card = styled.div`
 	background-color: #fff;
 	border-radius: 8px;
 	border: 1px solid gray;
-  	border-bottom: 8px solid purple;
+  	border-bottom: 8px solid #b938ff;
   	padding: 15px;	
 
   	p.bld{
@@ -40,4 +51,4 @@ const Card = styled.div`
 `	
 
 
-export {Footer, Circle, Card};
+export {Footer, Circle, Navs, Card};

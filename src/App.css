@@ -2,9 +2,29 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo{
+  color: #fffee6;
+  font-size: calc(15px + 3vmin);
+  text-decoration: none;
+  padding-right: calc(15px + 3vmin);
+}
+
+.navLinks, .accessLinks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width:300px;
+  font-size: calc(9px + 1.5vmin);
+  margin: 0;
+  padding-left: calc(2px + .5vmin);
+}
+.navLinks li, .accessLinks li{
+  display: inline;
+
+}
+
+.accessLinks{
+  width: 150px;
 }
 
 section{
@@ -23,35 +43,21 @@ section{
   width: 50%;
 }
 .rdiv2{
-    background-color: #fff;
+    background: url('./resources/bgimage.jpeg') no-repeat center;
     color: #282c34;
 }
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.navLinks a, .accessLinks a{
+  text-decoration: none;
+  color: #fff;
 }
+.navLinks a:active, .accessLinks a:active{
+  text-decoration: underline;
+}
+
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(3px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
