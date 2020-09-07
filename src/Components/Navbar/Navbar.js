@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-    Link
+    Link,
+    useRouteMatch
 } from "react-router-dom";
 import {Navs, Navlist, SButton} from '../StyledComponents'
 
@@ -9,15 +10,27 @@ const Navbar = ()=>{
 	<Navs>
 	<Link className="logo" to="/home">ROADABLE</Link>
       <Navlist>
-         <li><Link to="/home">HOME</Link></li>
-         <li><Link to="/how-it-works">HOW IT WORKS</Link></li>
-         <li><Link to="/about">ABOUT US</Link></li>
+         <Menulink to="/home" label="HOME" />
+         <Menulink to="/how-it-works" label="HOW IT WORKS" activeOnlyWhenExact={true} />
+         <Menulink to="/about" label="ABOUT US" />
       </Navlist>
       <Navlist access>
         <li><Link to="/login"><SButton>LOGIN</SButton></Link></li>
         <li><Link to="/signup"><SButton>SIGN UP</SButton></Link></li>
       </Navlist>
 	</Navs>)
+}
+
+
+const Menulink =({ label, to, activeOnlyWhenExact })=>{
+  let match = useRouteMatch({
+    path: to,
+    exact: activeOnlyWhenExact
+  });
+
+  return(
+    <li className={match?"active":"links"}><Link to={to}>{label}</Link></li>
+    )
 }
 
 export default Navbar;

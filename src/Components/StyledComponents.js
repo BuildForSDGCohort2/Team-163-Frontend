@@ -20,7 +20,15 @@ const Navlist = styled.ul`
   
   li{
   	  display: inline;
-  	  padding-left: 10px;
+  	  margin-left: 10px;
+  }
+
+  li.active{
+  	 border-bottom: 5px solid #FFF;
+  }
+  li.links{border-bottom:5px solid transparent}
+  li.links:hover{
+  	border-bottom: 5px solid #b938ff;
   }
 
    a{text-decoration: none;

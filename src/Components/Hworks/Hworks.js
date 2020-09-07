@@ -50,7 +50,7 @@ const Hworks =()=>{
 	</Card>
 </section>
 </div>
-		)
+		);
 }
 
 

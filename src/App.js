@@ -21,7 +21,7 @@ return (
       <Route exact path ="/">
         <Hworks/>
       </Route>
-      <Route exact path ="/how-it-works">
+      <Route path ="/how-it-works">
         <Hworks/>
       </Route>
       <Route path="/about">
