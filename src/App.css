@@ -2,44 +2,23 @@
   text-align: center;
   min-height: 100vh;
   position: relative;
+}
 
+.App-header {
+  background-color: #282c34;
+  color: white;
 }
 
 .logo{
   color: #fffee6;
-  font-size: calc(15px + 3vmin);
+  font-size: calc(12px + 3vmin);
   text-decoration: none;
-  padding-right: calc(15px + 3vmin);
 }
-
-.navLinks, .accessLinks{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width:300px;
-  font-size: calc(9px + 1vmin);
-  margin: 0;
-  padding-left: calc(2px + .5vmin);
-}
-.navLinks li, .accessLinks li{
-  display: inline;
-
-}
-
-.accessLinks{
-  width: 190px;
-}
-
-section{
-    justify-content: space-around;
-    display: flex;
-    padding: 100px 10px 100px 10px;
-
-}
-.container{
+.main-container{
   display: flex;
 }
-.rdiv, .rdiv2{
+
+.image-div, .text-div{
   background-color: #282c34;
   text-align: justify;
   color: #fff;
@@ -50,18 +29,8 @@ section{
    justify-content: center;
     align-items: center;
 }
-.placeholder{
-  position: absolute;
-  z-index: 2;
-width: 100%;
-font-size: calc(10px + 1vmin);
-font-weight: bold;
-margin-top: 10px;}
-.dark-text{
-  color: #FFF;
 
-}
-.rdiv2{
+.image-div{
     background: url('./resources/bgimage.jpeg');
     color: #282c34;
     background-position: center;
@@ -69,16 +38,24 @@ margin-top: 10px;}
     background-size: contain;
 }
 
-.navLinks a, .accessLinks a{
-  text-decoration: none;
-  color: #fff;
-}
-.navLinks a:active, .accessLinks a:active{
-  text-decoration: underline;
+.campaign{
+    justify-content: space-around;
+    display: flex;
+    padding: 100px 10px 100px 10px;
 }
 
+.placeholder{
+position: absolute;
+z-index: 2;
+width: 100%;
+font-size: calc(12px + 1vmin);
+font-weight: 800;
+margin-top: 10px;
+font-style: italic;
+text-decoration: underline;}
 
-.App-header {
-  background-color: #282c34;
-  color: white;
-}
+.dark-text{color: #FFF;
+text-decoration: underline;}
+
+
+
