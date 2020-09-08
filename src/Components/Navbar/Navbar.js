@@ -1,18 +1,21 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import {Navs, Navlist, SButton} from '../StyledComponents'
 
 const Navbar = ()=>{
 	return(
 	<Navs>
-	<a className="logo" href="1">ROADABLE</a>
+	<Link className="logo" to="/home">ROADABLE</Link>
       <Navlist>
-         <li><a href="2">HOME</a></li>
-         <li><a href="3">HOW IT WORKS</a></li>
-         <li><a href="3">ABOUT US</a></li>
+         <li><Link to="/home">HOME</Link></li>
+         <li><Link to="/how-it-works">HOW IT WORKS</Link></li>
+         <li><Link to="/about">ABOUT US</Link></li>
       </Navlist>
       <Navlist access>
-        <li href="4"><SButton>LOGIN</SButton></li>
-        <li href="5"><SButton>SIGN UP</SButton></li>
+        <li><Link to="/login"><SButton>LOGIN</SButton></Link></li>
+        <li><Link to="/signup"><SButton>SIGN UP</SButton></Link></li>
       </Navlist>
 	</Navs>)
 }
