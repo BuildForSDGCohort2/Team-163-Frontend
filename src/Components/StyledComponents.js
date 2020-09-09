@@ -55,9 +55,20 @@ const SButton =  styled.button`
 }
 ` 
 
+const ReportCard = styled.div`
+width: 400px;
+min-height: 500px;
+background-color: #FFF;
+border-radius:10px;
+margin: 0 auto;
+-webkit-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
+`
+
 const Card = styled.div `
 	text-align: center;
-	width: 200px;
+	width:200px;
 	min-height: 220px;
 	background-color: #fff;
 	border-radius: 8px;
@@ -111,4 +122,4 @@ const FooterDiv = styled.div `
     margin:0 auto;
 `
 
-export {Navs, Navlist, SButton,  Card, Circle, FooterDiv};
+export {Navs, Navlist, SButton, ReportCard, Card, Circle, FooterDiv};

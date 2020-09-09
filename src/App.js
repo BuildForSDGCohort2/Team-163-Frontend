@@ -7,7 +7,9 @@ import {
 import './App.css';
 import Navbar from './Components/Navbar/Navbar'
 import Hworks from './Components/Hworks/Hworks'
-import Footer from './Components/Footer/Footer';
+import Footer from './Components/Footer/Footer'
+import Report from './Components/Report/Report'
+
 
 const App = () => {
 
@@ -32,8 +34,12 @@ return (
       </Route>
       <Route path="/login">
         <Sample/>
-      </Route>  <Route path="/signup">
+      </Route> 
+       <Route path="/signup">
         <Sample/>
+      </Route>
+      <Route path="/report">
+        <Report/>
       </Route>
     </Switch>
     <Footer/>
