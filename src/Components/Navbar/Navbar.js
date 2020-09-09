@@ -15,8 +15,8 @@ const Navbar = ()=>{
          <Menulink to="/about" label="ABOUT US" />
       </Navlist>
       <Navlist access>
-        <li><Link to="/login"><SButton>LOGIN</SButton></Link></li>
-        <li><Link to="/signup"><SButton>SIGN UP</SButton></Link></li>
+        <li><Link to="/login"><SButton access>LOGIN</SButton></Link></li>
+        <li><Link to="/signup"><SButton access>SIGN UP</SButton></Link></li>
       </Navlist>
 	</Navs>)
 }

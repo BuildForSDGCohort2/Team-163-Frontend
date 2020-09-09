@@ -1,0 +1,25 @@
+.report-container{
+	 display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    padding-bottom: 70px;
+}
+
+.user-input{
+	padding: 20px 50px 20px 50px;
+	color:#5e5e5e;
+	font-size: 1.5em;
+	height: 100%;
+}
+.upload-image{display: flex;
+align-items: center;
+height: 50px;
+padding-left: 10px;}
+
+.image-preview{
+	border: 1px solid #c2c2c2;
+	border-radius: 10px;
+	height: 150px;
+	margin-top: 20px;
+}

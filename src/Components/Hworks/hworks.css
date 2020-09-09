@@ -31,6 +31,7 @@
 .placeholder{
 position: absolute;
 z-index: 2;
+text-align: center;
 width: 100%;
 font-size: calc(12px + 1vmin);
 font-weight: 800;

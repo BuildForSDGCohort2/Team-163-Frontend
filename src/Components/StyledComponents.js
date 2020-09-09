@@ -35,35 +35,56 @@ const Navlist = styled.ul`
      color: #fff;}
 `
 
+const buttonShadow =  `0px 1px 2px 1px rgba(0,0,0,0.63)`;
 const SButton =  styled.button`
-	border-radius:5px;
-	border: 2px solid #b938ff;
-	background-color:#282c34;
-	color: #fff;
-	padding:7px;
-	font-size: calc(5px + 1vmin);
-	width: 80px;
+	border-radius:${props=>props.access?"5px":"0px"};
+	border: ${props=>props.access?"2px solid #b938ff":"none"};
+	background-color:${props=>props.access?"#282c34":"#FFF"};
+	color:${props=>props.userInput?"#5e5e5e;":"#fff"};
+	margin-left:${props=>props.userInput?"20px":""};
+	padding:${props=>props.userInput?"8px":"7px"};
+	font-size: ${props=>props.userInput?"calc(8px + 1vmin)":"calc(5px + 1vmin)"};
+	width: ${props=>props.access?"80px":""};
 	outline:none;
 	cursor: pointer;
-
+	box-shadow: ${props=>props.userInput?buttonShadow:""};
+	-webkit-box-shadow: ${props=>props.userInput?buttonShadow:""};
+-moz-box-shadow: ${props=>props.userInput?buttonShadow:""};
 	:hover{
-		background-color:#b938ff;
+		background-color:${props=>props.access?"#b938ff":""};
 	}
 	:active {
-    background-color: slateblue;
+    background-color: ${props=>props.access?"slateblue":""};
     border-color: slateblue;
+    box-shadow: none;
+    border: ${props=>props.userInput?"1px solid rgba(0,0,0,0.63)":""}
 }
 ` 
 
+const boxShadow =`0px 1px 9px 0px rgba(0,0,0,0.75)`;
 const ReportCard = styled.div`
-width: 400px;
-min-height: 500px;
+width: 350px;
+height: 500px;
 background-color: #FFF;
 border-radius:10px;
 margin: 0 auto;
--webkit-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
-box-shadow: 0px 1px 9px 0px rgba(0,0,0,0.75);
+justify-self: center;
+align-self: center;
+-webkit-box-shadow: ${boxShadow};
+-moz-box-shadow: ${boxShadow};
+box-shadow: ${boxShadow};
+
+	.report-label{
+		border-radius: 10px;
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		font-size: 1.5em;
+		vertical-align: middle;
+		background-color:#dedcdb;
+		text-align: center;
+		font-weight: 400;
+	}
 `
 
 const Card = styled.div `
@@ -72,7 +93,7 @@ const Card = styled.div `
 	min-height: 220px;
 	background-color: #fff;
 	border-radius: 8px;
-	border: 1px solid gray;
+	border: 1px solid #5e5e5e;
   	border-bottom: 8px solid #b938ff;
   	padding: 15px;
   	margin-left: 5px;
@@ -87,7 +108,7 @@ const Card = styled.div `
   	}
   	p{
   		font-size: 13px;
-  		color: #424242;
+  		color: #5e5e5e;
   	}
 `
 
