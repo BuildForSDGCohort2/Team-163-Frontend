@@ -2,15 +2,14 @@
 	 display: flex;
     justify-content: center;
     align-items: center;
-    height: 600px;
+    height: 700px;
     padding-bottom: 70px;
 }
 
 .user-input{
 	padding: 20px 50px 20px 50px;
-	color:#5e5e5e;
+	color:#918e8c;
 	font-size: 1.5em;
-	height: 100%;
 }
 .upload-image{display: flex;
 align-items: center;

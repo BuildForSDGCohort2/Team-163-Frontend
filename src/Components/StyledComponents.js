@@ -63,8 +63,8 @@ const SButton =  styled.button`
 
 const boxShadow =`0px 1px 9px 0px rgba(0,0,0,0.75)`;
 const ReportCard = styled.div`
-width: 350px;
-height: 500px;
+width: 370px;
+height: 580px;
 background-color: #FFF;
 border-radius:10px;
 margin: 0 auto;
@@ -86,7 +86,39 @@ box-shadow: ${boxShadow};
 		font-weight: 400;
 	}
 `
-
+const InputLabel = styled.div`
+display: flex;
+align-items: center;
+height: 50px;
+padding-left: 10px;
+margin-top:5px;
+span{
+	margin-left:20px;
+	font-size:calc(8px + 1vmin);
+	
+}
+label{
+	display: flex;
+}
+`
+const CommentBoxShadow=`0px 1px 3px 0px rgba(0,0,0,0.65)`;
+const CommentBox = styled.textarea`
+ padding: 10px;
+    line-height: 1.5;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+-webkit-box-shadow: ${CommentBoxShadow};
+-moz-box-shadow: ${CommentBoxShadow};
+box-shadow: ${CommentBoxShadow};
+    background-color:#f7f5f3;
+      resize: none;
+      width:247px;
+      outline:0;
+	
+	:focus{
+		border-color:#b938ff;
+	}
+`
 const Card = styled.div `
 	text-align: center;
 	width:200px;
@@ -143,4 +175,4 @@ const FooterDiv = styled.div `
     margin:0 auto;
 `
 
-export {Navs, Navlist, SButton, ReportCard, Card, Circle, FooterDiv};
+export {Navs, Navlist, SButton, ReportCard, InputLabel,CommentBox, Card, Circle, FooterDiv};

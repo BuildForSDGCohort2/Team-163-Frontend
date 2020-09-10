@@ -1,6 +1,6 @@
 import React from 'react';
 import "./styles.css"
-import {SButton, ReportCard} from '../StyledComponents'
+import {SButton, ReportCard, InputLabel, CommentBox} from '../StyledComponents'
 
 const Report =()=>{
 	return(
@@ -14,7 +14,17 @@ const Report =()=>{
 					</div>
 					<div className="image-preview">
 					</div>
+					<InputLabel><label htmlFor="comment">
+					<i className="far fa-comment-dots"></i>
+					<span>Comment:</span>
+					</label>
+					</InputLabel>
+					<CommentBox id="comment" name="comment"
+          rows="4" cols="29"/>
+          		<InputLabel><i className="fas fa-map-marker-alt"></i><span>Allow Location</span>
+          		</InputLabel>
 				</div>
+				<SButton access>+Report</SButton>
 			</ReportCard>
 		</div>)
 }
