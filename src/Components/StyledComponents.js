@@ -35,25 +35,30 @@ const Navlist = styled.ul`
      color: #fff;}
 `
 
-const buttonShadow =  `0px 1px 2px 1px rgba(0,0,0,0.63)`;
+const buttonShadow =  `0px 1px 2px 1px rgba(0,0,0,0.33)`;
 const SButton =  styled.button`
-	border-radius:${props=>props.access?"5px":"0px"};
-	border: ${props=>props.access?"2px solid #b938ff":"none"};
+	border-radius:${props=>props.access||props.report?
+		"5px":"0px"};
+	border: ${props=>props.access||props.report?"2px solid #b938ff":
+	"none"};
 	background-color:${props=>props.access?"#282c34":"#FFF"};
-	color:${props=>props.userInput?"#5e5e5e;":"#fff"};
+	color:${props=>props.userInput?"#5e5e5e":props.report?"#282c34":"#fff"};
 	margin-left:${props=>props.userInput?"20px":""};
-	padding:${props=>props.userInput?"8px":"7px"};
-	font-size: ${props=>props.userInput?"calc(8px + 1vmin)":"calc(5px + 1vmin)"};
-	width: ${props=>props.access?"80px":""};
+	padding:${props=>props.userInput?"8px":props.access?"7px":"6px"};
+	font-size: ${props=>props.userInput||props.report?"calc(7px + 1vmin)":"calc(5px + 1vmin)"};
+	width: ${props=>props.access?"80px":props.report?"120px":""};
 	outline:none;
+	float: ${props=>props.report?"right":""};
+	margin-right:${props=>props.report?"10px":""};
 	cursor: pointer;
 	box-shadow: ${props=>props.userInput?buttonShadow:""};
 	-webkit-box-shadow: ${props=>props.userInput?buttonShadow:""};
 -moz-box-shadow: ${props=>props.userInput?buttonShadow:""};
+	height: ${props=>props.userInput?"29px":""};
 	:hover{
 		background-color:${props=>props.access?"#b938ff":""};
 	}
-	:active {
+	:active{
     background-color: ${props=>props.access?"slateblue":""};
     border-color: slateblue;
     box-shadow: none;
@@ -63,8 +68,8 @@ const SButton =  styled.button`
 
 const boxShadow =`0px 1px 9px 0px rgba(0,0,0,0.75)`;
 const ReportCard = styled.div`
-width: 370px;
-height: 580px;
+width: 330px;
+height: 525px;
 background-color: #FFF;
 border-radius:10px;
 margin: 0 auto;
@@ -77,19 +82,19 @@ box-shadow: ${boxShadow};
 	.report-label{
 		border-radius: 10px;
 		width: 100%;
-		height: 40px;
-		line-height: 40px;
+		height: 35px;
+		line-height: 35px;
 		font-size: 1.5em;
 		vertical-align: middle;
 		background-color:#dedcdb;
 		text-align: center;
-		font-weight: 400;
+		font-weight: 500;
 	}
 `
 const InputLabel = styled.div`
 display: flex;
 align-items: center;
-height: 50px;
+height: 40px;
 padding-left: 10px;
 margin-top:5px;
 span{
@@ -112,7 +117,7 @@ const CommentBox = styled.textarea`
 box-shadow: ${CommentBoxShadow};
     background-color:#f7f5f3;
       resize: none;
-      width:247px;
+      width:217px;
       outline:0;
 	
 	:focus{

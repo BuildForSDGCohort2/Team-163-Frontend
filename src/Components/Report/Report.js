@@ -8,10 +8,11 @@ const Report =()=>{
 			<ReportCard>
 			<div className="report-label">REPORT</div>
 				<div className="user-input">
-					<div className="upload-image">
+					<InputLabel>
 						<i className="fas fa-camera"></i>
-						<SButton userInput>Upload Image</SButton>
-					</div>
+{/*						<SButton type="file" userInput>Upload Image</SButton>
+*/}						<label className="label" htmlFor="image">Upload Image</label><input name="image" type="file" className="upload-image"/>
+					</InputLabel>
 					<div className="image-preview">
 					</div>
 					<InputLabel><label htmlFor="comment">
@@ -24,7 +25,7 @@ const Report =()=>{
           		<InputLabel><i className="fas fa-map-marker-alt"></i><span>Allow Location</span>
           		</InputLabel>
 				</div>
-				<SButton access>+Report</SButton>
+				<SButton report>+ REPORT</SButton>
 			</ReportCard>
 		</div>)
 }

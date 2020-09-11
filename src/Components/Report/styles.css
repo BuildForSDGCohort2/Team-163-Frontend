@@ -2,23 +2,76 @@
 	 display: flex;
     justify-content: center;
     align-items: center;
-    height: 700px;
+    height: 600px;
     padding-bottom: 70px;
 }
 
 .user-input{
-	padding: 20px 50px 20px 50px;
+	padding: 15px 45px 15px 45px;
 	color:#918e8c;
 	font-size: 1.5em;
 }
-.upload-image{display: flex;
-align-items: center;
-height: 50px;
-padding-left: 10px;}
+.label{color:#5e5e5e; display: inline-block;}
+.upload-image{display: none
+}
 
+/* .upload-image::-webkit-file-upload-button {
+ content: 'Upload Image';
+} */
 .image-preview{
 	border: 1px solid #c2c2c2;
 	border-radius: 10px;
 	height: 150px;
 	margin-top: 20px;
 }
+
+/* .upload-image::before {
+  content: 'Upload Image';
+  color: black;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  width: ;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.upload-image:active {
+  outline: 0;
+}
+ */
+
+
+
+/* border-radius:${props=>props.access||props.report?
+		"5px":"0px"};
+	border: ${props=>props.access||props.report?"2px solid #b938ff":
+	"none"};
+	background-color:${props=>props.access?"#282c34":"#FFF"};
+	color:${props=>props.userInput?"#5e5e5e":props.report?"#282c34":"#fff"};
+	margin-left:${props=>props.userInput?"20px":""};
+	padding:${props=>props.userInput?"8px":props.access?"7px":"6px"};
+	font-size: ${props=>props.userInput||props.report?"calc(7px + 1vmin)":"calc(5px + 1vmin)"};
+	width: ${props=>props.access?"80px":props.report?"120px":""};
+	outline:none;
+	float: ${props=>props.report?"right":""};
+	margin-right:${props=>props.report?"10px":""};
+	cursor: pointer;
+	box-shadow: ${props=>props.userInput?buttonShadow:""};
+	-webkit-box-shadow: ${props=>props.userInput?buttonShadow:""};
+-moz-box-shadow: ${props=>props.userInput?buttonShadow:""};
+	height: ${props=>props.userInput?"29px":""};
+	:hover{
+		background-color:${props=>props.access?"#b938ff":""};
+	}
+	:active{
+    background-color: ${props=>props.access?"slateblue":""};
+    border-color: slateblue;
+    box-shadow: none;
+    border: ${props=>props.userInput?"1px solid rgba(0,0,0,0.63)":""}
+} */
