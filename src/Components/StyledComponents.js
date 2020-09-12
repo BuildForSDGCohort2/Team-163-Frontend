@@ -8,7 +8,7 @@ const Navs = styled.div `
 	align-items: center;
 `
 
-const Navlist = styled.ul`
+const Navlist = styled.ul `
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -35,8 +35,7 @@ const Navlist = styled.ul`
      color: #fff;}
 `
 
-const buttonShadow =  `0px 1px 2px 1px rgba(0,0,0,0.33)`;
-const SButton =  styled.button`
+const SButton = styled.button `
 	border-radius:5px;
 	border:2px solid #b938ff;
 	background-color:${props=>props.access?"#282c34":"#FFF"};
@@ -48,19 +47,19 @@ const SButton =  styled.button`
 	float: ${props=>props.report?"right":""};
 	margin-right:${props=>props.report?"10px":""};
 	cursor: pointer;
-	:hover{
+	 :hover{
 		background-color:${props=>props.access?"#b938ff":""};
 	}
-	:active{
-    background-color: ${props=>props.access?"slateblue":""};
-    border-color: slateblue;
+	 :active{
+       background-color: ${props=>props.access?"slateblue":""};
+       border-color: slateblue;
 }
-` 
+`
 
-const boxShadow =`0px 1px 9px 0px rgba(0,0,0,0.75)`;
-const ReportCard = styled.div`
+const boxShadow = `0px 1px 9px 0px rgba(0,0,0,0.75)`;
+const ReportCard = styled.div `
 width: 330px;
-height: 525px;
+height: 535px;
 background-color: #FFF;
 border-radius:10px;
 margin: 0 auto;
@@ -82,7 +81,7 @@ box-shadow: ${boxShadow};
 		font-weight: 500;
 	}
 `
-const InputLabel = styled.div`
+const LabelDiv = styled.div`
 display: flex;
 align-items: center;
 height: 40px;
@@ -90,34 +89,39 @@ padding-left: 10px;
 margin-top:5px;
  
  span{
-	margin-left:20px;
-	font-size:calc(8px + 1vmin);
-	
+	margin-left:15px;
+	font-size:13px;	
 }
+
+span.filename{margin-left:10px; max-width:77px;
+  white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;}
 
 label{
 	display: flex;
 }
-
 `
-const CommentBoxShadow=`0px 1px 3px 0px rgba(0,0,0,0.65)`;
-const CommentBox = styled.textarea`
- padding: 10px;
-    line-height: 1.5;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+
+const CommentBoxShadow = `0px 1px 3px 0px rgba(0,0,0,0.65)`;
+const CommentBox = styled.textarea `
+padding: 10px;
+line-height: 1.5;
+border-radius: 5px;
+border: 1px solid #ccc;
 -webkit-box-shadow: ${CommentBoxShadow};
 -moz-box-shadow: ${CommentBoxShadow};
 box-shadow: ${CommentBoxShadow};
-    background-color:#f7f5f3;
-      resize: none;
-      width:217px;
-      outline:0;
-	
+background-color:#f7f5f3;
+resize: none;
+width:217px;
+outline:0;
+
 	:focus{
 		border-color:#b938ff;
 	}
 `
+
 const Card = styled.div `
 	text-align: center;
 	width:200px;
@@ -129,6 +133,7 @@ const Card = styled.div `
   	padding: 15px;
   	margin-left: 5px;
   	margin-right: 5px;	
+  	
   	:hover{
   		border-bottom-color: slateblue;
   	}
@@ -137,6 +142,7 @@ const Card = styled.div `
   		font-weight: 500;
   		font-size: 18px;
   	}
+  	
   	p{
   		font-size: 13px;
   		color: #5e5e5e;
@@ -174,4 +180,4 @@ const FooterDiv = styled.div `
     margin:0 auto;
 `
 
-export {Navs, Navlist, SButton, ReportCard, InputLabel,CommentBox, Card, Circle, FooterDiv};
+export { Navs, Navlist, SButton, ReportCard, LabelDiv, CommentBox, Card, Circle, FooterDiv };
