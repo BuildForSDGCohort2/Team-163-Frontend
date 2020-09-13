@@ -4,12 +4,15 @@ import { SButton, ReportCard, LabelDiv, CommentBox } from '../StyledComponents'
 
 const Report =()=> {
 
-    const [Filename, setFilename] = useState("");
+    const [imageename, setFilename] = useState("");
 
     const handleselectedFile = event => {
-        try{setFilename(event.target.files[0].name);}
-        catch{setFilename(Filename)}
-    };
+    const uploadedfiles= event.target.files;
+        try{
+            return (uploadedfiles.length===1?setFilename(uploadedfiles[0].name)
+                :setFilename(`${uploadedfiles.length} images`))}
+        catch(err){setFilename(`nothing uploaded`)}
+    }
 
 return (
             <div className="report-container">
@@ -21,11 +24,11 @@ return (
     				<i className="fas fa-camera"></i>
     				<div className="upload-image">
     				 <label className="upload-button" htmlFor="roadimage">Upload Image</label>
-    				 <input id="roadimage" name="roadimage" type="file" alt="road picture"
+    				 <input id="roadimage" name="roadimage" type="file" multiple alt="road picture"
                       onChange={handleselectedFile} 
                      accept="image/*"
                       className="upload-input"/>
-    				 <span className="filename">{Filename}</span>
+    				 <span className="filename">{imageename}</span>
     				</div>
     				</LabelDiv>
     			    <div className="image-preview">
