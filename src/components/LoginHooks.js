@@ -1,6 +1,7 @@
 import React from "react";
 import { useGoogleLogin } from "react-google-login";
 import { refreshTokenSetup } from "../utils/refreshToken";
+import logo from "../img/google-icon.svg";
 // import { logo } from "../img/google-icon.svg";
 
 const clientId =
@@ -26,6 +27,7 @@ export default function LoginHooks() {
 
   return (
     <button onClick={signIn} className="button">
+      <img src={logo} alt='' className="icon" />
       <span className="buttonText">Sign in with Google</span>
     </button>
   );

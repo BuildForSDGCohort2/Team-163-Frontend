@@ -1,0 +1,103 @@
+.landing-body {
+  background-image: url("../../img/landingpage-bg.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  height: 100vh;
+}
+
+/* .landing-container {
+  max-width: 840px !important;
+} */
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+i {
+  font-size: 6rem;
+}
+
+header {
+  padding-top: 1.5rem;
+}
+
+/* nav styles */
+.navbar {
+  color: var(--white) !important;
+  text-transform: uppercase;
+}
+
+.navbar-collapse {
+  justify-content: flex-end !important;
+}
+
+.nav-link {
+  color: var(--white) !important;
+}
+
+/* logo style */
+.navbar-logo {
+  color: var(--white) !important;
+  font-size: 2rem !important;
+}
+
+/* contact button style */
+#contact {
+  margin-left: 2rem;
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: 4px;
+  border: none;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#access-grid h1 {
+  text-transform: uppercase;
+  word-break: keep-all;
+}
+
+#sign-up {
+  text-align: center;
+  /* margin-top: 3rem; */
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-color: white !important;
+}
+
+.card-text {
+  color: #333;
+  font-size: 1.6rem;
+}
+
+.login-btn {
+  background-color: var(--secondary);
+  border: none;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.modal-title,
+label {
+  color: black;
+}
+
+.modal-signup-btn {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: black;
+}
+
+@media screen and (max-width: 990px) {
+  #contact {
+    margin-left: 0;
+    width: fit-content;
+  }
+  
+}
