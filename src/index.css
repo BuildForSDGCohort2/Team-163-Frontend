@@ -21,10 +21,6 @@ body {
   color: var(--white) !important;
 }
 
-/* .landing-body {
-  background-image: url('./img/landingpage-bg.jpg');
-}
-
 ul,li {
   list-style: none;
 }
@@ -34,12 +30,19 @@ a {
   color: var(--white);
 }
 
-i {
-  font-size: 6rem;
+.google-button {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+  width: -webkit-fill-available;
+}
+.logo {
+  color: white;
 }
 
-header {
-  padding-top: 1.5rem;
+.logo:hover {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 700;
 }
 
 /* nav styles

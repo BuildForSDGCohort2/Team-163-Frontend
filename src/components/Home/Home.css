@@ -1,7 +1,3 @@
-/* .container {
-    max-width: 640px !important;
-  } */
-
 .access-link {
   display: inline !important;
   color: navy !important;
@@ -73,8 +69,30 @@
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  /* border-radius: 0.25rem; */
   color: var(--text-color);
+}
+/* active nav link */
+.selected {
+  border-bottom: 5px solid var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.hovered:hover, .hovered:focus {
+  border-bottom: 5px solid var(--primary) !important;
+  color: #fff !important;
+  font-weight: 500;
+  text-decoration: none !important;
+}
+
+.navbar-logo a:hover {
+  text-decoration: none;
+  color: white !important;
+  font-weight: 700;
+}
+.report-hover:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
 .h5 {

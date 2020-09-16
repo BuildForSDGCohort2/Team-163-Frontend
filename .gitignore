@@ -11,6 +11,9 @@
 # production
 /build
 
+#apikeys
+.env
+
 # misc
 .vscode
 .DS_Store

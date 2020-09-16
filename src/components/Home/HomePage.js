@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 import "../../App.css";
 import "./Home.css";
 import roadReport from "../../img/manifesto.png";
@@ -16,10 +15,10 @@ import {
   Card,
   Form,
   Modal,
-} from "react-bootstrap"
+} from "react-bootstrap";
 import LoginHooks from "../LoginHooks";
 import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
-// import LandingPage from './LandingPage';
+import { NavLink } from "react-router-dom";
 
 const mapStyles = {
   width: "100%",
@@ -49,16 +48,39 @@ export default function HomePage(props) {
     <div className="home-body">
       <Container className="home-container">
         <Navbar expand="lg">
-          <Navbar.Brand href="#Home" className="navbar-logo">
-            ROADABLE
+          <Navbar.Brand href="" className="navbar-logo">
+            <NavLink exact to="/home">
+              ROADABLE
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="">
-              <Nav.Link href="#">Home</Nav.Link>
-              <Nav.Link href="#">How It Works</Nav.Link>
-              <Nav.Link href="#">About Us</Nav.Link>
-              <Nav.Link className="sign-up" href="#">
+              <Nav.Link href="">
+                <NavLink
+                  exact
+                  to="/home"
+                  className="hovered"
+                  activeClassName="selected"
+                >
+                  Home
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link href="">
+                <NavLink exact to="/how-it-works" className="hovered">
+                  How It Works
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link href="">
+                <NavLink exact to="/about" className="hovered">
+                  About Us
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link
+                className="sign-up"
+                href=""
+                onClick={() => setSignupShow(true)}
+              >
                 Sign Up
               </Nav.Link>
             </Nav>
@@ -77,7 +99,11 @@ export default function HomePage(props) {
                     className="cta-btn"
                     onClick={() => setSignupShow(true)}
                   >
-                    <Nav.Link>+ REPORT</Nav.Link>
+                    <Nav.Link>
+                      <NavLink exact to="/report" className="report-hover">
+                        + REPORT
+                      </NavLink>
+                    </Nav.Link>
                   </Button>
                 </span>
                 <span>
@@ -105,7 +131,7 @@ export default function HomePage(props) {
               }}
             >
               <span>
-                <i className="fas fa-clipboard-list"></i>
+                <img src={roadReport} alt="manifesto" height="80" />
               </span>
             </Col>
             <Col
@@ -121,7 +147,7 @@ export default function HomePage(props) {
               }}
             >
               <span>
-                <i class="fas fa-road"></i>
+                <img src={roadCon} alt="road" height="80" />
               </span>
             </Col>
             <Col
@@ -137,7 +163,7 @@ export default function HomePage(props) {
               }}
             >
               <span>
-                <i class="fas fa-car"></i>
+                <img src={trafficReport} alt="traffic" height="80" />
               </span>
             </Col>
 
@@ -336,7 +362,7 @@ export default function HomePage(props) {
         <Row style={{ height: "-webkit-fill-available" }}>
           <Col sm={12} lg={9} className="map">
             <WrappedMap
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyC-K1V8lbS6y2v96Kmpgmj5v59IJgMYqdk
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=${process.env.REACT_APP_GOOGLE_KEY}
               `}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `100%` }} />}
