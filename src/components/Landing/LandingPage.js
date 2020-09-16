@@ -15,8 +15,7 @@ import {
 } from "react-bootstrap";
 import LoginHooks from "../LoginHooks";
 import "./Landing.css";
-import { Link } from 'react-router-dom';
-// import Home from './HomePage';
+import { NavLink } from 'react-router-dom';
 
 
 export default function LandingPage(props) {
@@ -27,24 +26,44 @@ export default function LandingPage(props) {
       <Container className="landing-container">
         <Navbar expand="lg">
           <Navbar.Brand href="#Home" className="navbar-logo">
-            ROADABLE
+            <NavLink exact to="/home">
+              ROADABLE
+            </NavLink>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="">
               <Nav.Link>
-                <Link to="/home">Home</Link>
+                <NavLink
+                  exact
+                  to="/home"
+                  activeClassName="selected"
+                  className="hovered"
+                >
+                  Home
+                </NavLink>
               </Nav.Link>
-              <Nav.Link href="#">How It Works</Nav.Link>
-              <Nav.Link href="#">About Us</Nav.Link>
-              <Nav.Link id="contact" href="#">
-                Contact Us
+              <Nav.Link href="">
+                <NavLink exact to="/how-it-works" className="hovered">
+                  How It Works
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link href="">
+                <NavLink exact to="/about" className="hovered">
+                  About Us
+                </NavLink>
+              </Nav.Link>
+              <Nav.Link
+                id="sign-up-cta"
+                onClick={() => setSignupShow(true)}
+              >
+                Sign Up
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
 
-        <div id="access-grid" className="mt-5">
+        <div id="access-grid">
           <Row id="tag">
             <Col sm={12} md={5}>
               <h1 className="h2">Better Roads For A Safer Drive.</h1>
@@ -55,7 +74,7 @@ export default function LandingPage(props) {
                 go, go, go, go! Forget the fat lady! You're obsessed with the
                 fat lady! Drive us out of here!
               </p>
-              <div id="sign-up" className="mb">
+              <div id="report" className="">
                 <Button
                   style={{
                     backgroundColor: "#912cee",

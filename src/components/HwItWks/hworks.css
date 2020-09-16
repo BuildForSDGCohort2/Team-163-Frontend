@@ -1,0 +1,48 @@
+.main-container {
+  display: flex;
+}
+
+.image-div,
+.text-div {
+  background-color: #333;
+  text-align: justify;
+  color: #fff;
+  padding: 35px;
+  width: 50%;
+  min-height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-div {
+  background: url("../../img/bgimage.jpeg");
+  color: #282c34;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.campaign {
+  justify-content: space-around;
+  display: flex;
+  padding: 100px 10px 100px 10px;
+}
+
+.placeholder {
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  font-size: calc(12px + 1vmin);
+  font-weight: 800;
+  margin-top: 10px;
+  font-style: italic;
+  text-decoration: underline;
+  color: #333;
+}
+
+.dark-text {
+  color: #fff;
+  text-decoration: underline;
+}
