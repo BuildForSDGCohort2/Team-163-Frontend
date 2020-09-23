@@ -53,10 +53,7 @@ export default function LandingPage(props) {
                   About Us
                 </NavLink>
               </Nav.Link>
-              <Nav.Link
-                id="sign-up-cta"
-                onClick={() => setSignupShow(true)}
-              >
+              <Nav.Link id="sign-up-cta" onClick={() => setSignupShow(true)}>
                 Sign Up
               </Nav.Link>
             </Nav>
@@ -82,7 +79,11 @@ export default function LandingPage(props) {
                   }}
                   onClick={() => setSignupShow(true)}
                 >
-                  <Nav.Link>Report</Nav.Link>
+                  <Nav.Link>
+                    <NavLink exact to="/report" className="report-hover">
+                      + REPORT
+                    </NavLink>
+                  </Nav.Link>
                 </Button>
               </div>
             </Col>
@@ -93,14 +94,14 @@ export default function LandingPage(props) {
                   <Form>
                     <Form.Group controlId="formBasicEmail">
                       <Form.Label>Email address</Form.Label>
-                      <Form.Control type="email" />
+                      <Form.Control type="email" required className="email-required" />
                       <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                       </Form.Text>
                     </Form.Group>
                     <Form.Group controlId="formBasicPassword">
                       <Form.Label>Password</Form.Label>
-                      <Form.Control type="password" />
+                      <Form.Control type="password" required />
                     </Form.Group>
                     <Button
                       className="login-btn"
@@ -110,6 +111,10 @@ export default function LandingPage(props) {
                       LOGIN
                     </Button>
                   </Form>
+                  <div className="or-text">
+                    <h4>OR</h4>
+                  </div>
+                  <LoginHooks>Sign In with Google</LoginHooks>
                 </Card.Body>
               </Card>
             </Col>

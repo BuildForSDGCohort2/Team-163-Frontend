@@ -63,9 +63,8 @@ const SButton = styled.button`
 const boxShadow = `0px 1px 9px 0px rgba(0,0,0,0.75)`;
 const ReportCard = styled.div`
   width: 330px;
-  height: 535px;
+  height: 100vh;
   background-color: #fff;
-  border-radius: 10px;
   margin: 0 auto;
   justify-self: center;
   align-self: center;
@@ -73,13 +72,12 @@ const ReportCard = styled.div`
   -moz-box-shadow: ${boxShadow};
   box-shadow: ${boxShadow};
   .report-label {
-    border-radius: 10px;
     width: 100%;
     height: 35px;
     line-height: 35px;
     font-size: 1.5em;
     vertical-align: middle;
-    background-color: #dedcdb;
+    background-color: #333;
     text-align: center;
     font-weight: 500;
   }
@@ -88,7 +86,6 @@ const LabelDiv = styled.div`
   display: flex;
   align-items: center;
   height: 40px;
-  padding-left: 10px;
   margin-top: 5px;
 
   span {
@@ -118,7 +115,7 @@ const CommentBox = styled.textarea`
   box-shadow: ${CommentBoxShadow};
   background-color: #f7f5f3;
   resize: none;
-  width: 217px;
+  width: -webkit-fill-available;
   outline: 0;
   :focus {
     border-color: #b938ff;

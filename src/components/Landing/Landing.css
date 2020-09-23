@@ -1,27 +1,9 @@
 .landing-body {
-  background-image: url("../../img/landingpage-bg.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-image: url("../../assets/img/landingpage-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  width:100vw;
-}
-
-ul,
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--white);
-}
-
-i {
-  font-size: 6rem;
-}
-
-header {
-  padding-top: 1.5rem;
+  width: 100vw;
 }
 
 /* nav styles */
@@ -36,6 +18,10 @@ header {
 
 .nav-link {
   color: var(--white) !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-color: white !important;
 }
 
 /* logo style */
@@ -54,6 +40,8 @@ header {
   font-family: "Fira Sans", sans-serif;
 }
 
+/* access grid */
+
 #access-grid h1 {
   text-transform: uppercase;
   word-break: keep-all;
@@ -61,12 +49,14 @@ header {
 
 #report {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 3.5rem;
+}
+.report-hover:hover {
+  color: #fff;
+  text-decoration: none;
 }
 
-.navbar-light .navbar-toggler-icon {
-  background-color: white !important;
-}
+/* login styles */
 
 .card-text {
   color: #333;
@@ -79,6 +69,19 @@ header {
   padding-right: 2rem;
   padding-left: 2rem;
 }
+.google-button:focus {
+  outline: none;
+  border: 2px solid var(--primary);
+}
+
+.or-text {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: #333;
+  text-align: center;
+}
+
+/* modal */
 
 .modal-title,
 label {
@@ -91,10 +94,30 @@ label {
   color: black;
 }
 
+/* media queries */
+
 @media screen and (max-width: 990px) {
+  .container {
+    max-width: 800px !important;
+  }
   #sign-up-cta {
     margin-left: 0;
     width: fit-content;
   }
-  
+  #access-grid {
+    top: 0 !important;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .landing-body {
+    height: 100%;
+  }
+  #report {
+    margin: 1.5rem 0;
+  }
+  .login-box {
+    padding-bottom: 1rem;
+  }
 }
