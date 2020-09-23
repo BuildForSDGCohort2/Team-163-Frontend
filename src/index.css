@@ -6,8 +6,8 @@
 }
 
 
-/* base styles */
-* {
+/* default styles */
+*, ::before, ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -44,105 +44,3 @@ a {
   color: white !important;
   font-weight: 700;
 }
-
-/* nav styles
-.navbar {
-  color: var(--white) !important;
-  text-transform: uppercase;
-}
-
-.navbar-collapse {
-  justify-content: flex-end !important;
-}
-
-.nav-link {
-  color: var(--white) !important;
-}
-
-/* logo style 
-.navbar-logo {
-  color: var(--white) !important;
-  font-size: 2rem;
-}
-
-/* contact button style
-#contact {
-  margin-left: 2rem;
-  padding: .5rem;
-  background-color: var(--primary);
-  border-radius: 4px;
-  border: none;
-  font-family: 'Fira Sans', sans-serif;
-  
-}
-
-/* access grid
-#access-grid {
-  position: relative;
-  top: 5.6rem;
-}
-
-#access-grid h1 {
-  text-transform: uppercase;
-  word-break: keep-all;
-}
-
-#sign-up {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.card-text {
-  color: #333;
-  font-size: 1.6rem;
-}
-
-.login-btn {
-  background-color: var(--secondary);
-  border: none;
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.modal-title, label {
-  color: black;
-}
-
-.modal-signup-btn {
-  background: transparent;
-  border: 1px solid var(--primary);
-  color: black;
-} */
-
-/* .access-link {
-  display: inline !important;
-  color:navy !important;
-  padding-left: .2rem;
-}
-
-.button {
-  display: block;
-  cursor: pointer;
-  font-size: 1.3em;
-  box-sizing: content-box;
-  margin: 20px auto 0px;
-  width: 70%;
-  padding: 15px 20px;
-  border-radius: 4px;
-  border: 1px solid var(--primary);
-  background-color: white;
-  box-shadow: 0px 16px 60px rgba(78, 79, 114, 0.08);
-  position: relative;
-}
-
-.buttonText {
-  color: #4285f4;
-  font-weight: bolder;
-}
-
-.icon {
-  width: 30px;
-  height: 30px;
-  position: relative;
-  left: -60px;
-} */

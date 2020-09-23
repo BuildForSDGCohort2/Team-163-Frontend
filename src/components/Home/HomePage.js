@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import "../../App.css";
 import "./Home.css";
-import roadReport from "../../img/manifesto.png";
-import roadCon from "../../img/road.png";
-import trafficReport from "../../img/traffic.png";
+import roadReport from "../../assets/img/manifesto.png";
+import roadCon from "../../assets/img/road.png";
+import trafficReport from "../../assets/img/traffic.png";
 import {
   Container,
   Navbar,

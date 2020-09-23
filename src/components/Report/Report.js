@@ -1,9 +1,26 @@
 import React, { useState } from "react";
 import "./Report.css";
 import { SButton, ReportCard, LabelDiv, CommentBox } from "../StyledComponents";
+import camera from "../../assets/img/camera.png";
+import comment from "../../assets/img/conversation.png";
 
 const Report = () => {
   const [imageename, setFilename] = useState("");
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [address, setUserAddress] = useState(null);
+
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert("Geolocation is not supported by this browser.")
+    }
+  }
+
+  const showPosition = (position) => {
+    console.log(position);
+  }
 
   const handleselectedFile = (event) => {
     const uploadedfiles = event.target.files;
@@ -23,7 +40,7 @@ const Report = () => {
           <div className="report-label">REPORT</div>
           <div className="user-input">
             <LabelDiv>
-              <i className="fas fa-camera"></i>
+              <img src={camera} alt="camera icon" />
               <div className="upload-image">
                 <label className="upload-button" htmlFor="roadimage">
                   Upload Image
@@ -42,15 +59,15 @@ const Report = () => {
               </div>
             </LabelDiv>
             <div className="image-preview"></div>
-            <LabelDiv>
-              <label htmlFor="comment">
-                <i className="far fa-comment-dots"></i>
+            <LabelDiv style={{margin:"1rem 0"}}>
+              <label htmlFor="comment" style={{display:"inline"}}>
+                <img src={comment} alt="comment icon" className="comment-icon" />
                 <span>Comment:</span>
               </label>
             </LabelDiv>
             <CommentBox id="comment" name="comment" rows="4" cols="29" />
             <LabelDiv>
-              <i className="fas fa-map-marker-alt"></i>
+              <input type="checkbox" onClick={getLocation} />
               <span>Allow Location</span>
             </LabelDiv>
           </div>

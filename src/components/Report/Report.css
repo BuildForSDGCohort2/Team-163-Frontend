@@ -2,13 +2,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
-  padding-bottom: 70px;
+  height: 100vh;
+  /* padding-bottom: 70px; */
 }
 
 .user-input {
-  padding: 15px 45px 15px 45px;
-  color: #918e8c;
+  padding: 15px;
+  color: #333;
   font-size: 1.5em;
 }
 
@@ -45,4 +45,13 @@
   border-radius: 10px;
   height: 150px;
   margin-top: 20px;
+  width: 100%;
+}
+
+.comment-icon {
+  width: 45px;
+}
+
+label {
+  display:inline;
 }

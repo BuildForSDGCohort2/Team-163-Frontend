@@ -1,5 +1,5 @@
 import React from "react";
-import { FooterDiv } from "../../StyledComponents";
+import { FooterDiv } from "../StyledComponents";
 
 const Footer = () => {
   return (
