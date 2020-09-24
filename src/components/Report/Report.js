@@ -5,22 +5,22 @@ import camera from "../../assets/img/camera.png";
 import comment from "../../assets/img/conversation.png";
 
 const Report = () => {
-  const [imageename, setFilename] = useState("");
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-  const [address, setUserAddress] = useState(null);
+  // const [imageename, setFilename] = useState("");
+  // const [latitude, setLatitude] = useState(null);
+  // const [longitude, setLongitude] = useState(null);
+  // const [address, setUserAddress] = useState(null);
 
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      alert("Geolocation is not supported by this browser.")
-    }
-  }
+  // const getLocation = () => {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(showPosition);
+  //   } else {
+  //     alert("Geolocation is not supported by this browser.")
+  //   }
+  // }
 
-  const showPosition = (position) => {
-    console.log(position);
-  }
+  // const showPosition = (position) => {
+  //   console.log(position);
+  // }
 
   const handleselectedFile = (event) => {
     const uploadedfiles = event.target.files;
