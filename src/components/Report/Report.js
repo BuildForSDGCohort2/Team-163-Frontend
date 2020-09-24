@@ -6,21 +6,21 @@ import comment from "../../assets/img/conversation.png";
 
 const Report = () => {
   const [imageename, setFilename] = useState("");
-  const [latitude, setLatitude] = useState(null);
-  const [longitude, setLongitude] = useState(null);
-  const [address, setUserAddress] = useState(null);
+  // const [latitude, setLatitude] = useState(null);
+  // const [longitude, setLongitude] = useState(null);
+  // const [address, setUserAddress] = useState(null);
 
-  const getLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      alert("Geolocation is not supported by this browser.")
-    }
-  }
+  // const getLocation = () => {
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(showPosition);
+  //   } else {
+  //     alert("Geolocation is not supported by this browser.")
+  //   }
+  // }
 
-  const showPosition = (position) => {
-    console.log(position);
-  }
+  // const showPosition = (position) => {
+  //   console.log(position);
+  // }
 
   const handleselectedFile = (event) => {
     const uploadedfiles = event.target.files;
@@ -67,7 +67,7 @@ const Report = () => {
             </LabelDiv>
             <CommentBox id="comment" name="comment" rows="4" cols="29" />
             <LabelDiv>
-              <input type="checkbox" onClick={getLocation} />
+              <input type="checkbox" />
               <span>Allow Location</span>
             </LabelDiv>
           </div>
