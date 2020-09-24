@@ -5,7 +5,7 @@ import camera from "../../assets/img/camera.png";
 import comment from "../../assets/img/conversation.png";
 
 const Report = () => {
-  // const [imageename, setFilename] = useState("");
+  const [imageename, setFilename] = useState("");
   // const [latitude, setLatitude] = useState(null);
   // const [longitude, setLongitude] = useState(null);
   // const [address, setUserAddress] = useState(null);
@@ -67,7 +67,7 @@ const Report = () => {
             </LabelDiv>
             <CommentBox id="comment" name="comment" rows="4" cols="29" />
             <LabelDiv>
-              <input type="checkbox" onClick={getLocation} />
+              <input type="checkbox" />
               <span>Allow Location</span>
             </LabelDiv>
           </div>
