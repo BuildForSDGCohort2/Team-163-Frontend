@@ -6,3 +6,7 @@
 .navbar-light .navbar-toggler {
   border-color: transparent !important;
 }
+
+.form-group label {
+  font-weight: 700;
+}
