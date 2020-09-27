@@ -6,21 +6,23 @@ import comment from "../../assets/img/conversation.png";
 
 const Report = () => {
   const [imageename, setFilename] = useState("");
-  // const [latitude, setLatitude] = useState(null);
-  // const [longitude, setLongitude] = useState(null);
-  // const [address, setUserAddress] = useState(null);
+  const [latitude, setLatitude] = useState(null);
+  const [longitude, setLongitude] = useState(null);
+  const [address, setUserAddress] = useState(null);
 
-  // const getLocation = () => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(showPosition);
-  //   } else {
-  //     alert("Geolocation is not supported by this browser.")
-  //   }
-  // }
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert("Geolocation is not supported by this browser.")
+    }
+  }
 
-  // const showPosition = (position) => {
-  //   console.log(position);
-  // }
+  const showPosition = (position) => {
+    setLatitude(position.coords.latitude);
+    setLongitude(position.coords.longitude);
+    console.log(latitude)
+  }
 
   const handleselectedFile = (event) => {
     const uploadedfiles = event.target.files;
@@ -59,16 +61,22 @@ const Report = () => {
               </div>
             </LabelDiv>
             <div className="image-preview"></div>
-            <LabelDiv style={{margin:"1rem 0"}}>
-              <label htmlFor="comment" style={{display:"inline"}}>
-                <img src={comment} alt="comment icon" className="comment-icon" />
+            <LabelDiv style={{ margin: "1rem 0" }}>
+              <label htmlFor="comment" style={{ display: "inline" }}>
+                <img
+                  src={comment}
+                  alt="comment icon"
+                  className="comment-icon"
+                />
                 <span>Comment:</span>
               </label>
             </LabelDiv>
             <CommentBox id="comment" name="comment" rows="4" cols="29" />
             <LabelDiv>
-              <input type="checkbox" />
-              <span>Allow Location</span>
+              <input type="checkbox" id="location" onInput={getLocation} />
+              <span>
+                <label htmlFor="location" style={{marginBottom:0}}>Allow Location</label>
+              </span>
             </LabelDiv>
           </div>
           <SButton report>+ REPORT</SButton>

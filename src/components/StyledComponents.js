@@ -89,8 +89,8 @@ const LabelDiv = styled.div`
   margin-top: 5px;
 
   span {
-    margin-left: 15px;
-    font-size: 13px;
+    margin-left: 10px;
+    font-size: 1.012rem;
   }
   span.filename {
     margin-left: 10px;
