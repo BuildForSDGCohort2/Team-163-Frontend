@@ -7,23 +7,28 @@ import comment from "../../assets/img/conversation.png";
 const Report = () => {
   const [imageename, setFilename] = useState("");
   // const [latitude, setLatitude] = useState(null);
+  const [file, setFile] = useState(null);
   // const [longitude, setLongitude] = useState(null);
   // const [address, setUserAddress] = useState(null);
 
-  // const getLocation = () => {
-  //   if (navigator.geolocation) {
-  //     navigator.geolocation.getCurrentPosition(showPosition);
-  //   } else {
-  //     alert("Geolocation is not supported by this browser.")
-  //   }
-  // }
+  const getLocation = () => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert("Geolocation is not supported by this browser.")
+    }
+  }
 
-  // const showPosition = (position) => {
-  //   console.log(position);
-  // }
+  const showPosition = (position) => {
+    // setLatitude(position.coords.latitude);
+    // setLongitude(position.coords.longitude);
+    // console.log(latitude)
+  }
 
-  const handleselectedFile = (event) => {
-    const uploadedfiles = event.target.files;
+  const handleChange = (e) => {
+    const uploadedfiles = e.target.files;
+    setFile(URL.createObjectURL(uploadedfiles[0]));
+    
     try {
       return uploadedfiles.length === 1
         ? setFilename(uploadedfiles[0].name)
@@ -31,7 +36,7 @@ const Report = () => {
     } catch (err) {
       setFilename(`nothing uploaded`);
     }
-  };
+  }
 
   return (
     <div className="report-container">
@@ -51,24 +56,30 @@ const Report = () => {
                   type="file"
                   multiple
                   alt="road picture"
-                  onChange={handleselectedFile}
+                  onChange={handleChange}
                   accept="image/*"
                   className="upload-input"
                 />
                 <span className="filename">{imageename}</span>
               </div>
             </LabelDiv>
-            <div className="image-preview"></div>
-            <LabelDiv style={{margin:"1rem 0"}}>
-              <label htmlFor="comment" style={{display:"inline"}}>
-                <img src={comment} alt="comment icon" className="comment-icon" />
+            <div className="image-preview"><img src={file} alt="" width="298" height="148" /></div>
+            <LabelDiv style={{ margin: "1rem 0" }}>
+              <label htmlFor="comment" style={{ display: "inline" }}>
+                <img
+                  src={comment}
+                  alt="comment icon"
+                  className="comment-icon"
+                />
                 <span>Comment:</span>
               </label>
             </LabelDiv>
             <CommentBox id="comment" name="comment" rows="4" cols="29" />
             <LabelDiv>
-              <input type="checkbox" />
-              <span>Allow Location</span>
+              <input type="checkbox" id="location" onInput={getLocation} />
+              <span>
+                <label htmlFor="location" style={{marginBottom:0}}>Allow Location</label>
+              </span>
             </LabelDiv>
           </div>
           <SButton report>+ REPORT</SButton>
